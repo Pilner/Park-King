@@ -7,7 +7,7 @@ export default function Footer() {
 		<div className="container">
 			<div>
 				<div>
-					<p className="body-text" style={{textAlign: 'center'}}>PARK KING</p>
+					<Link href={"/"}><p className="body-text" style={{textAlign: 'center'}}>PARK KING</p></Link>
 				</div>
 				<div>
 					<p className="body-title">Our Mission</p>

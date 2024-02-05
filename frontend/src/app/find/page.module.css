@@ -1,0 +1,101 @@
+#findSpot {
+	height: 87vh;
+}
+
+#findSpot > div > div {
+	/* height: 100%; */
+	/* margin: 2rem 0; */
+	/* border: 1px solid yellowgreen; */
+	color: var(--text-black);
+}
+
+.sectionCaption {
+	margin: 2rem 0;
+}
+
+.sectionCaption p {
+	padding: 1rem 0;
+}
+
+#findSpot > div > div > div:last-child {
+	/* height: 100%; */
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#carInfo {
+	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.7), rgba(0,0,0,.8)), url("/findspot1.jpg");
+	background-position: 0% 80%;
+	background-size: cover;
+	/* margin: 2rem 0; */
+	margin: auto;
+	width: 100%;
+	padding: 5rem 0;
+	align-items: center;
+	border: 2px solid var(--black);
+	border-radius: 1rem;
+	color: var(--text-white);
+}
+
+#carInfo > div {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	margin: 3.5rem;
+}
+
+#carInfo > div > div {
+	flex-basis: 50%;
+}
+
+#carInfo > div > .left > p:first-child {
+	padding-bottom: 1rem;
+}
+
+#carInfo > div > .right {
+	flex-basis: 50%;
+	text-align: center;
+	height: 100%;
+}
+
+#carInfo > div > .right > form {
+	height: 100%;
+	margin: 1rem;
+}
+
+#carInfo form > select {
+	padding: 0.5rem;
+	margin: 0 0.5rem;
+	width: 20rem;
+	border-radius: 1rem;
+}
+
+#mapSection {
+	background-color: var(--light-yellow);
+	height: 100vh;
+}
+
+#mapSection > div > div {
+	height: inherit;
+	padding: 2.5rem 0;
+	/* border: 1px solid black; */
+	color: var(--text-black);
+}
+
+#mapSection > div > div > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.mapContainer {
+	width: 100%;
+	height: 65%;
+	/* margin: auto 0 0 0; */
+	margin-top: 5rem;
+	border: 2px solid var(--black);
+	border-radius: 1rem;
+	overflow: hidden;
+}

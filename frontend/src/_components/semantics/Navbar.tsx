@@ -14,7 +14,7 @@ export default function Navbar() {
 				<div className={style.right}>
 					<ul className={style.navlinks}>
 						<li className={`body-text ` + style.nav_items}><Link href='/'>home</Link></li>
-						<li className={`body-text ` + style.nav_items}><Link href='/findspot'>find a spot</Link></li>
+						<li className={`body-text ` + style.nav_items}><Link href='/find'>find a spot</Link></li>
 						<li className={`body-text ` + style.nav_items}><Link href=''>contact</Link></li>
 					</ul>
 				</div>
