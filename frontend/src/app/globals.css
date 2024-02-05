@@ -18,6 +18,10 @@
     padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -38,28 +42,38 @@ a {
     color: inherit;
 }
 
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .hero-title {
     font-family: var(--main-font);
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 500;
 }
 
 .hero-text {
     font-family: var(--sub-font);
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
 .body-title {
     font-family: var(--main-font);
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .body-text {
     font-family: var(--sub-font);
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .container {
@@ -68,3 +82,28 @@ a {
     margin: 0 auto;
     /* border: 1px solid red; */
 }
+
+/* BUTTON */
+.round-button {
+	padding: 10px 25px;
+	color: var(--text-black);
+	background: var(--yellow);
+	font-size: 16px;
+	font-weight: 400;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.round-button:hover {
+	background-color: var(--blue);
+	color: var(--text-white);
+	transition: .1s;
+}
+
+.round-button:not(:hover) {
+	transition: .1s;
+}
+.button-div {
+  margin: 2em 0;
+}
+/* BUTTON */
