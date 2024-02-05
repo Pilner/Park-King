@@ -1,0 +1,43 @@
+#nav {
+	background-color: var(--dark-blue);
+	width: 100%;
+	height: 10vh;
+}
+
+#navbar {
+	height: 100%;
+	display: flex;
+	width: 100%;
+	color: var(--text-white);
+}
+
+.container {
+	/* border: 1px solid red; */
+}
+
+.navlinks {
+	list-style-type: none;
+	display: flex;
+	white-space: nowrap;
+}
+
+.navlinks > .nav_items {
+	padding: 0 2em;
+	width: 100%;
+	margin: auto;
+	transition: 200ms;
+}
+
+.navlinks > .nav_items:first-child {
+	border-right: 1px solid var(--white);
+}
+
+.navlinks > .nav_items:last-child {
+	border-left: 1px solid var(--white);
+}
+
+
+.right {
+	display: flex;
+	margin: auto 0 auto auto;
+}

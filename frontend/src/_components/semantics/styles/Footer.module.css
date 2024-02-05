@@ -1,0 +1,17 @@
+#footer {
+	background-color: var(--dark-blue);
+	height: 30vh;
+}
+
+#footer > div > div {
+	height: 100%;
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-around;
+	color: var(--white);
+	align-items: center;
+}
+
+#footer > div > div div {
+	flex-basis: 30%;
+}
