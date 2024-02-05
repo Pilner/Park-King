@@ -1,22 +1,21 @@
 #hero {
 	height: 90vh;
-	border: 1px solid red;
 }
 
 #introduction {
 	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.5), rgba(0,0,0,.6)), url("@/../../../public/introduction1.png");
 	background-position: 0% 80%;
 	background-size: cover;
-	margin: 2em 0;
+	margin: 2rem 0;
 	width: 100%;
-	height: 20em;
+	height: 20rem;
 	border: 2px solid var(--black);
-	border-radius: 1em;
+	border-radius: 1rem;
 	color: var(--text-white);
 }
 
 #introduction > div {
-	padding: 3.5em;
+	padding: 3.5rem;
 	display: flex;
 }
 
@@ -36,27 +35,26 @@
 }
 
 #information > div > div {
-	padding: 2em 0;
+	padding: 2rem 0;
 }
 
 #information > div > div > div {
-	margin: 2em 0;
+	margin: 2rem 0;
 }
 
 #information > div > div > #about {
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid red;
 }
 
 #information > div > div > #about > div:first-child {
-	height: 25em;
+	height: 25rem;
 	width: 100%;
 	background-image: url("@/../../../public/information1.jpg");
 	flex-basis: 48%;
 	background-size: cover;
 	background-position: 0% 70%;
-	border-radius: 1em;
+	border-radius: 1rem;
 }
 
 #information > div > div > #about > div:last-child {
@@ -67,17 +65,16 @@
 #information > div > div > #developers {
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid red;
 }
 
 #information > div > div > #developers > div:last-child {
-	height: 25em;
+	height: 25rem;
 	width: 100%;
 	background-image: url("@/../../../public/information2.jpg");
 	flex-basis: 48%;
 	background-size: cover;
 	background-position: 0% 70%;
-	border-radius: 1em;
+	border-radius: 1rem;
 }
 
 #information > div > div > #developers > div:first-child {
