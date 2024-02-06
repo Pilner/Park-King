@@ -52,6 +52,30 @@ button {
 	outline: inherit;
 }
 
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea, select {
+	font-family: var(--main-font);
+	font-size: 1.2rem;
+	border-radius: 0.5vmin;
+	border: 1px solid rgba(0,0,0,0.4);
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus, select:focus {
+	outline: 1px solid rgba(0,0,0,0.4);
+}
+
+textarea {
+	font-family: var(--main-font);
+}
+
 .hero-title {
     font-family: var(--main-font);
     font-size: 3rem;
