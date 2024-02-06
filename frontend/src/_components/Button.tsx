@@ -15,3 +15,12 @@ export default function Button({text, url}: ButtonProps) {
 	</div>
   )
 }
+
+
+export function ButtonSubmit({text}: ButtonProps) {
+	return (
+	<div className={`button-div`}>
+		<button type='submit' className={`round-button`}>{text}</button>
+	</div>
+	)
+}
