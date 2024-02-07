@@ -133,3 +133,35 @@ textarea {
   margin: 2em auto;
 }
 /* BUTTON */
+
+
+/* .marker {
+	background-image: url('mapbox-icon.png');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+} */
+
+.marker {
+	align-items: center;
+	z-index: 100;
+}
+
+.marker svg {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 1vmin;
+}
+
+.marker svg:hover {
+	cursor: pointer;
+}
+
+.marker svg[data-selected="true"] {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.marker svg[data-selected="true"]:hover {
+	cursor: default;
+}

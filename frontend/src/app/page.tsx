@@ -24,7 +24,11 @@ export default function Home() {
 							alt="Illustration 1"
 							width={0}
 							height={0}
-							style={{ width: '100%', height: 'auto', flexBasis: "45%"}}
+							style={{
+								width: '100%',
+								height: 'auto',
+								flexBasis: "45%"
+							}}
 					
 						/>
 						<Image
