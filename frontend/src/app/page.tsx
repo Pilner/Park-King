@@ -1,95 +1,75 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import style from "./page.module.css";
+import Navbar from "@/_components/semantics/Navbar";
+import Footer from "@/_components/semantics/Footer";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<>
+			<Navbar />
+			<section id={style.hero}>
+				<div className="container">
+					<div id={style.introduction}>
+						<div>
+							<div>
+								<p className="hero-title">Park King</p>
+								<p className="hero-text">A Parking Management Application made for tracking availability of parking spots in public places.</p>
+							</div>
+							<div></div>
+						</div>
+					</div>
+					<div id={style.illustration}>
+						<Image
+							src={"/illustration1.png"}
+							alt="Illustration 1"
+							width={0}
+							height={0}
+							style={{
+								width: '100%',
+								height: 'auto',
+								flexBasis: "45%"
+							}}
+					
+						/>
+						<Image
+							src={"/illustration2.png"}
+							alt="Illustration 1"
+							width={0}
+							height={0}
+							style={{ width: '100%', height: 'auto', flexBasis: "45%"}}
+						/>
+					</div>
+				</div>
+			</section>
+			<section id={style.information}>
+				<div className="container">
+					<div>
+						<div id={style.about}>
+							<div></div>
+							<div>
+								<p className="body-title">About Us</p>
+								<br />
+								<p className="body-text">At Park King, we revolutionize the way people experience parking management. Founded with a passion for efficiency and a commitment to customer satisfaction, Park King offers innovative solutions to streamline parking operations and enhance the overall parking experience.</p>
+							</div>
+						</div>
+						<div id={style.developers}>
+							<div>
+								<p className="body-title">Meet the Developers</p>
+								<br />
+								<p className="body-text">This project is made possible by three college programmers:</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+								<ul>
+									<li className="body-text">Fabian Railey Victuelles for the Program</li>
+									<li className="body-text">Raymond Miguel Cerna for the UI/UX Design</li>
+									<li className="body-text">Andrei Enrico for the Project Management and Documentation.</li>
+								</ul>
+							</div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<Footer />
+		</>
+	);
 }

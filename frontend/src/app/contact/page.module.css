@@ -1,0 +1,26 @@
+#contactPage {
+	height: 90vh;
+}
+
+#contactPage > div > div {
+	/* border: 1px solid red; */
+	padding: 1rem 0;
+}
+
+#contactPage > div > div > form {
+	display: flex;
+	flex-direction: column;
+}
+
+#contactPage > div > div > form input,
+#contactPage > div > div > form textarea {
+	width: 80%;
+	padding: 0.5rem;
+	margin: 0.5rem auto;
+}
+
+#contactPage > div > div > form textarea {
+	min-height: 10rem;
+	max-height: 15rem;
+	resize: none;
+}

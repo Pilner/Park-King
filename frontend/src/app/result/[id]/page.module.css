@@ -1,0 +1,81 @@
+#resultPage {
+	min-height: 200vh;
+	background-color: var(--light-yellow);
+}
+
+.mapContainer {
+	margin: 0 auto 5rem auto;
+	width: 80%;
+	height: 35rem;
+	/* margin: auto 0 0 0; */
+	margin-top: 5rem;
+	border: 2px solid var(--black);
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.parkingLotSpace {
+	border: 1px solid var(--black);
+	overflow: hidden;
+	background-color: aliceblue;
+	border-radius: 1em;
+	height: 50rem;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parkingLot {
+	height: 80%;
+	width: 90%;
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.parkingLot > div {
+	/* border: 1px solid violet; */
+	flex-basis: 40%;
+
+	display: flex;
+}
+
+.parkingSpace {
+	flex-basis: 16.66667%;
+}
+
+
+
+.parkingLot > div:first-child .parkingSpace {
+	border-top: 3px solid var(--black);
+	border-left: 1px solid var(--black);
+	border-right: 1px solid var(--black);
+	border-bottom: 5px dotted rgba(0,0,0,0.2);
+}
+
+.parkingLot > div:first-child > .parkingSpace:first-child,
+.parkingLot>div:last-child>.parkingSpace:first-child {
+	border-left: 3px solid var(--black);
+}
+
+.parkingLot > div:last-child .parkingSpace {
+	border-top: 5px dotted rgba(0,0,0,0.2);
+	border-bottom: 3px solid var(--black);
+	border-left: 1px solid var(--black);
+	border-right: 1px solid var(--black);
+}
+
+.parkingLot>div:last-child .parkingSpace:last-child,
+.parkingLot>div:first-child .parkingSpace:last-child {
+	border-right: 3px solid var(--black);
+}
+
+.taken {
+	background-color: rgba(255,0,10,0.5);
+}
+.vacant {
+	background-color: rgba(0,255,10,0.5);
+}
