@@ -17,15 +17,23 @@ cd Park-King
 ```
 cd frontend && npm install
 ```
-3. Run the backend process using Java Springboot
+3. Go to [Mapbox](https://www.mapbox.com/) and copy your Access Token API Key to the environment variables in `frontend/`
+```
+touch /frontend/.env.local
+```
+And then insert your Access Token in `.env.local` using this format:
+```
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=<YOUR_API_KEY>
+```
+4. Run the backend process using Java Springboot
 ```
 cd ../backend && mvn spring-boot:run
 ```
-4. Open another terminal and run the frontend using NextJS
+5. Open another terminal and run the frontend using NextJS
 ```
 cd frontend && npm run dev
 ```
-5. View the website on browser at
+6. View the website on browser at
 ```
 localhost:3000
 ```
