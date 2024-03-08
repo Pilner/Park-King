@@ -3,6 +3,7 @@ import Link from 'next/link';
 interface ButtonProps {
 	text: string;
 	url: string;
+	form: string;
 }
 
 export default function Button({text, url}: ButtonProps) {
@@ -17,10 +18,12 @@ export default function Button({text, url}: ButtonProps) {
 }
 
 
-export function ButtonSubmit({text}: ButtonProps) {
+export function ButtonSubmit({text, form, url}: ButtonProps) {
 	return (
 	<div className={`button-div`}>
-		<button type='submit' className={`round-button`}>{text}</button>
+		<Link href={url} scroll={true}>
+			<button type='submit' form={form} className={`round-button`}>{text}</button>
+		</Link>
 	</div>
 	)
 }

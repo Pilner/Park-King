@@ -25,7 +25,7 @@ export default function ContactPage() {
 							<input type="email" placeholder="Email" />
 							<input type="tel" placeholder="Phone" />
 							<textarea name="message" placeholder="Message"></textarea>
-							<ButtonSubmit text="Submit" />
+							<ButtonSubmit url="#" form="#" text="Submit" />
 						</form>
 					</div>
 				</div>

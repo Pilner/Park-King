@@ -12,8 +12,8 @@ export default function Home() {
 					<div id={style.introduction}>
 						<div>
 							<div>
-								<p className="hero-title">Title</p>
-								<p className="hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus eligendi dolorum? Illo quas odio molestiae labore? Atque, explicabo labore!</p>
+								<p className="hero-title">Park King</p>
+								<p className="hero-text">A Parking Management Application made for tracking availability of parking spots in public places.</p>
 							</div>
 							<div></div>
 						</div>
@@ -48,13 +48,21 @@ export default function Home() {
 							<div></div>
 							<div>
 								<p className="body-title">About Us</p>
-								<p className="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, nihil maiores dignissimos eligendi voluptatum repudiandae in asperiores quam deserunt at, possimus sed reiciendis adipisci tempora dolore. Earum autem officiis sunt, vero porro possimus nobis molestias minus alias itaque tenetur ducimus accusamus aspernatur in sint quis quidem fuga ipsa obcaecati? Quos.</p>
+								<br />
+								<p className="body-text">At Park King, we revolutionize the way people experience parking management. Founded with a passion for efficiency and a commitment to customer satisfaction, Park King offers innovative solutions to streamline parking operations and enhance the overall parking experience.</p>
 							</div>
 						</div>
 						<div id={style.developers}>
 							<div>
-								<p className="body-title">About Us</p>
-								<p className="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, nihil maiores dignissimos eligendi voluptatum repudiandae in asperiores quam deserunt at, possimus sed reiciendis adipisci tempora dolore. Earum autem officiis sunt, vero porro possimus nobis molestias minus alias itaque tenetur ducimus accusamus aspernatur in sint quis quidem fuga ipsa obcaecati? Quos.</p>
+								<p className="body-title">Meet the Developers</p>
+								<br />
+								<p className="body-text">This project is made possible by three college programmers:</p>
+
+								<ul>
+									<li className="body-text">Fabian Railey Victuelles for the Program</li>
+									<li className="body-text">Raymond Miguel Cerna for the UI/UX Design</li>
+									<li className="body-text">Andrei Enrico for the Project Management and Documentation.</li>
+								</ul>
 							</div>
 							<div></div>
 						</div>

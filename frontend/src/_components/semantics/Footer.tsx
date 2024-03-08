@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import style from "./styles/Footer.module.css"
 
 export default function Footer() {
@@ -7,15 +8,17 @@ export default function Footer() {
 		<div className="container">
 			<div>
 				<div>
-					<Link href={"/"}><p className="body-text" style={{textAlign: 'center'}}>PARK KING</p></Link>
+					<p className="body-text">Park King</p>
 				</div>
 				<div>
 					<p className="body-title">Our Mission</p>
-					<p className="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim praesentium laboriosam id omnis debitis quaerat?</p>
+					<br />
+					<p className="body-text">To simplify parking management for businesses and individuals alike.</p>
 				</div>
 				<div>
 					<p className="body-title">Contact Us</p>
-					<p className="body-text">Email: lorem.ipsum@lorem.com</p>
+					<br />
+					<p className="body-text">Email: park.king@parkking.com</p>
 					<p className="body-text">Number: (+63)900-000-0000</p>
 				</div>
 			</div>
