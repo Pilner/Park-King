@@ -4,20 +4,44 @@
 import style from "./page.module.css";
 import Navbar from "@/_components/semantics/Navbar";
 import Footer from "@/_components/semantics/Footer";
-import Button from "@/_components/Button";
+import Button, {ButtonSubmit} from "@/_components/Button";
 import BlueMarker from "@/_components/BlueMarker";
+import RedMarker from "@/_components/RedMarker";
 
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useState, useEffect } from "react";
 
 export default function FindSpot() {
 
-	const handleMarkerDrag = (event) => {
-		console.log(event);
+	const [marker, setMarker] = useState(null);
+	const [data, setData] = useState([]);
+	const [activeLink, setActiveLink] = useState(0);
+
+	useEffect(() => {
+		// Fetch data before the component is rendered
+		async function fetchData() {
+			// Fetch data from external API
+			try {
+				const res = await fetch("http://localhost:8080/api/data");
+				const jsonData = await res.json();
+				return jsonData;
+			} catch {
+				console.error("Can't connect to database, probably server is off.")
+			}
+		}
+		fetchData().then((data) => {
+			setData(data);
+		});
+	}, []);
+
+	const handleMarkerClick = (id) => {
+		setActiveLink(id);
+		console.log(activeLink)
 	}
 
-	const handleFormSubmit = () => {};
-
+	const handleFormSubmit = () => {}
+	
 	return (
 		<>
 			<Navbar />
@@ -27,15 +51,7 @@ export default function FindSpot() {
 						<div className={style.sectionCaption}>
 							<p className="hero-title">Finding a spot</p>
 							<p className="hero-text">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Maiores, nemo distinctio eos
-								esse voluptatibus reiciendis? Amet libero
-								perspiciatis rerum officia voluptatibus hic cum!
-								Odio unde impedit accusamus dolor autem aperiam
-								eaque eum quaerat quidem voluptatibus, sit
-								blanditiis possimus debitis aut corrupti? Illum
-								aperiam reiciendis vitae blanditiis
-								exercitationem. Dolor, eos quas.
+								Simply input your car type and chosen location, and let us do the rest. Our advanced algorithm will swiftly locate the perfect spot for your vehicle, whether you're in a compact car, an SUV, or need accessibility accommodations.
 							</p>
 						</div>
 						<div>
@@ -46,14 +62,11 @@ export default function FindSpot() {
 											Car Information
 										</p>
 										<p className="hero-text">
-											Lorem ipsum dolor sit amet
-											consectetur adipisicing elit.
-											Tempora, corporis dignissimos
-											explicabo adipisci voluptatum quis.
+											Select the car type of your current vehicle.
 										</p>
 									</div>
 									<div className={style.right}>
-										<form onSubmit={handleFormSubmit}>
+										<form id="carsForm" onSubmit={handleFormSubmit}>
 											<label
 												className="body-title"
 												htmlFor="cars"
@@ -119,18 +132,24 @@ export default function FindSpot() {
 									maxZoom={20}
 									minZoom={11}
 								>
-									<Marker
-										latitude={14.598100399596916}
-										longitude={121.01079119510365}
-										anchor="bottom"
-										draggable="true"
-										onDragEnd={handleMarkerDrag}
-									>
-										<BlueMarker />
-									</Marker>
+									{/* Iteration */}
+									{data.map((item) => {
+										return (
+										<Marker
+											key={item.location_id}
+											latitude={item.latitude}
+											longitude={item.longitude}
+											anchor={`bottom`}
+											draggable={false}
+											onClick={() => handleMarkerClick(item.location_id)}
+										>
+											<BlueMarker />
+										</Marker>	
+										);
+									})}
 								</Map>
 							</div>
-							<Button text="Submit" url="/result" />
+							<ButtonSubmit url={`/result/${activeLink}`} form="carsForm" text="Submit" />
 						</div>
 					</div>
 				</div>
